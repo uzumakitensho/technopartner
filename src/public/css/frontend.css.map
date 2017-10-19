@@ -1,0 +1,1 @@
+{"version":3,"sources":["jumbotron.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"frontend.css","sourcesContent":["/* Move down content because we have a fixed navbar that is 50px tall */\nbody {\n  padding-top: 50px;\n  padding-bottom: 20px;\n}\n"]}

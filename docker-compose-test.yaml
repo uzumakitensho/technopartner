@@ -1,0 +1,17 @@
+webtest:
+  image: durenworks/laravel5-dev:0.4.6
+  volumes:
+   - .:/srv/web
+  working_dir: /srv/web
+  hostname: web-test
+  command: /sbin/my_init -- /build/script/run_test.sh
+  environment:
+   - APP_SOURCE=/srv/test
+   - ENV_FILE=.env.test
+  links:
+   - dbtest:db
+dbtest:
+  image: durenworks/mysql-dev:0.4.1
+  hostname: db-dev
+  environment:
+   - MYSQL_PASSWORD=password1
